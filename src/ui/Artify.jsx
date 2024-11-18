@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import Features from "./features";
+import Features from "./Features";
 
 const MainContainer = styled.div`
   display: flex;
