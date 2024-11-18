@@ -1,16 +1,20 @@
 import { styled } from "styled-components";
+import Blossom from "../ui/Blossom";
 
 const MainContainer = styled.div`
   background-color: #222;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  color: #0dff00;
-  padding: 20rem 0;
-  font-size: 7rem;
+  color: #fff;
 `;
 
 function NewMedia() {
-  return <MainContainer>敬请期待</MainContainer>;
+  return (
+    <MainContainer>
+      <Blossom />
+    </MainContainer>
+  );
 }
 
 export default NewMedia;

@@ -1,12 +1,9 @@
 import { css, styled } from "styled-components";
 import Nav from "./Nav";
 
-import Button from "./Button";
-import { useState } from "react";
-
 const BackgroundImage = styled.div`
   background-color: #222;
-  background-image: url(../../public/image/head.JPG);
+  background-image: url(/image/head.JPG);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -30,6 +27,16 @@ const H1 = styled.h1`
   font-weight: 700;
   font-style: italic;
   color: #0dff00;
+
+  @media (max-width: 500px) {
+    font-size: 8rem;
+  }
+  @media (max-width: 450px) {
+    font-size: 7rem;
+  }
+  @media (max-width: 400px) {
+    font-size: 6rem;
+  }
 `;
 
 const A = styled.a`

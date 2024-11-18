@@ -42,7 +42,7 @@ function Nav() {
   }
   return (
     <NavContainer>
-      <Wechat type={isShow} src="../../public/image/wechat.JPG" />
+      <Wechat type={isShow ? true : false} src="/image/wechat.JPG" />
       <P>HHQ</P>
       <Button onClick={onClick} />
     </NavContainer>

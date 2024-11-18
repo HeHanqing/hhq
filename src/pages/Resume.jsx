@@ -35,6 +35,15 @@ const Introduce = styled.div`
   border: #0dff00 2px solid;
   padding: 3.6rem 36rem;
 
+  @media (max-width: 1000px) {
+    padding: 3.6rem 10rem;
+  }
+  @media (max-width: 500px) {
+    padding: 2rem 2rem;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
   & strong {
     font-size: 3.6rem;
     color: #0dff00;
@@ -50,6 +59,10 @@ const Education = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: 15rem;
+
+  @media (max-width: 500px) {
+    margin-top: 10rem;
+  }
 
   & a {
     margin: 3.6rem 0;
@@ -86,10 +99,31 @@ const Courses = styled.div`
   margin-top: 3.6rem;
   padding: 2.4rem;
 
+  @media (max-width: 1000px) {
+    grid-row-gap: 2.4rem;
+    grid-column-gap: 2rem;
+    grid-template-columns: repeat(4, 12rem);
+  }
+  @media (max-width: 500px) {
+    grid-template-columns: repeat(4, 8rem);
+    font-size: 1.2rem;
+  }
+  @media (max-width: 450px) {
+    grid-template-columns: repeat(4, 1fr);
+    font-size: 1.2rem;
+  }
+  @media (max-width: 400px) {
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 1.2rem;
+  }
+
   & p {
     font-size: 1.8rem;
     color: #ddd;
     margin: 0;
+    @media (max-width: 500px) {
+      font-size: 1.2rem;
+    }
   }
 `;
 
@@ -105,11 +139,25 @@ const ExperienceContainer = styled.div`
   display: flex;
   margin-top: 8rem;
   gap: 20rem;
+  padding: 0 1.2rem;
+
+  @media (max-width: 900px) {
+    gap: 10rem;
+  }
+
+  @media (max-width: 500px) {
+    gap: 4rem;
+    font-size: 1.2rem;
+  }
 
   & svg {
     width: 4.8rem;
     height: 4.8rem;
     margin-bottom: 2.4rem;
+    @media (max-width: 500px) {
+      width: 3rem;
+      height: 3rem;
+    }
   }
 `;
 
@@ -117,6 +165,14 @@ const ExperienceItem = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  width: 18rem;
+  @media (max-width: 500px) {
+    width: 10rem;
+  }
+  @media (max-width: 400px) {
+    width: 8rem;
+  }
 `;
 
 const Award = styled.div`
@@ -129,6 +185,12 @@ const Award = styled.div`
   & p {
     margin-top: 1.8rem;
     font-size: 2rem;
+
+    @media (max-width: 500px) {
+      font-size: 1.2rem;
+      padding: 0 1rem;
+      text-align: center;
+    }
   }
 
   & strong {
@@ -155,6 +217,21 @@ const SkillsContainer = styled.div`
   row-gap: 4rem;
   margin-top: 8rem;
   justify-items: center;
+
+  @media (max-width: 1000px) {
+    grid-template-columns: repeat(5, 12rem);
+    column-gap: 2rem;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 1.2rem;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 1rem;
+    justify-items: start;
+  }
+  @media (max-width: 450px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 `;
 
 const SkillItem = styled.div`
@@ -165,6 +242,11 @@ const SkillItem = styled.div`
   & svg {
     width: 4rem;
     height: 4rem;
+
+    @media (max-width: 500px) {
+      width: 2rem;
+      height: 2rem;
+    }
   }
 `;
 function Resume() {
@@ -172,13 +254,13 @@ function Resume() {
     <MainContainer>
       <Introduce>
         <p>
-          <strong>Hi</strong>,欢迎来的我的个人网页
+          <strong>Hi</strong>,欢迎来到我的个人网页
         </p>
         <p>
           <span>我叫贺汉清，是湖南师范大学美术学院大四的学生</span>
         </p>
         <p>
-          做这个网页只要是为了更好的展示<span>我的作品</span>以及
+          做这个网页主要是为了更好的展示<span>我的作品</span>以及
           <span>我的能力！</span>
         </p>
       </Introduce>
@@ -206,21 +288,15 @@ function Resume() {
         <ExperienceContainer>
           <ExperienceItem>
             <BsPaletteFill />
-            <p>参与了学校推出的省级</p>
-            <p>课题项目“为你读诗”的</p>
-            <p>插画设计</p>
+            <p>参与了学校推出的省级课题项目“为你读诗”的插画设计</p>
           </ExperienceItem>
           <ExperienceItem>
             <MdDesignServices />
-            <p>参与了学校每年举行一</p>
-            <p>次的大型活动“师大之星</p>
-            <p>的主视觉设计</p>
+            <p>参与了学校每年举行一次的大型活动“师大之星的主视觉设计</p>
           </ExperienceItem>
           <ExperienceItem>
             <BsFillEmojiSmileFill />
-            <p>担任班级班长职务，并</p>
-            <p>且积极协助老师完成班</p>
-            <p>级各项事物</p>
+            <p>担任班级班长职务，并且积极协助老师完成班级各项事物</p>
           </ExperienceItem>
         </ExperienceContainer>
       </Experience>
